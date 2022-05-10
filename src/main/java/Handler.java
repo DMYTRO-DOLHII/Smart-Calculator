@@ -1,4 +1,6 @@
 import exception.ExceptionHandler;
+import exception.NotArithmeticSymbolException;
+import exception.UnexpectedSymbolException;
 
 /**
  * This class connects exception.ExceptionHandler and Calculator
@@ -26,8 +28,14 @@ public class Handler {
     /**
      * @return
      */
-    public boolean checkForExceptions(){
-        return exceptionHandler.hasException(this.input);
+    public boolean hasExceptions(){
+        try {
+            return exceptionHandler.exceptions(this.input);
+        } catch (UnexpectedSymbolException | NotArithmeticSymbolException e) {
+            e.printStackTrace();
+        }
+
+        return false;
     }
 
 
