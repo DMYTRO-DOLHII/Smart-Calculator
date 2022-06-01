@@ -1,10 +1,12 @@
 Calculator.java
  Calculator
-exception/UnexpectedSymbolException.java
- exception.UnexpectedSymbolException
 exception/ExceptionHandler.java
  exception.ExceptionHandler
-Handler.java
- Handler
+exception/UnexpectedSymbolException.java
+ exception.UnexpectedSymbolException
+exception/NotArithmeticSymbolException.java
+ exception.NotArithmeticSymbolException
 Main.java
  Main
+Handler.java
+ Handler
