@@ -7,23 +7,21 @@ public class ExceptionHandler {
 
     private final char[] unexpectedSymbols = {'+', '-', '*', '/', ')'};
 
-    public boolean exceptions(String expression) throws UnexpectedSymbolException, NotArithmeticSymbolException {
+    public void exceptions(String expression) throws UnexpectedSymbolException, NotArithmeticSymbolException {
 
         // Checking if expression has not math symbol
         Pattern pattern = Pattern.compile("[^0-9-+/*()]");
         Matcher matcher = pattern.matcher(expression);
         if (matcher.find()) {
             throw new NotArithmeticSymbolException();
+
         }
 
         for (int i = 0; i < expression.length(); i++) {
             if (i != expression.length() - 1) {
                 unexpectedSymbol(expression.charAt(i), expression.charAt(i + 1));
-
-                if(expression.charAt(i) == '/' && expression.charAt(i + 1) == '0'){
-                    throw new ArithmeticException();
-                }
-            } else{
+                divisionByZero(expression.charAt(i), expression.charAt(i + 1));
+            } else {
                 if (expression.charAt(i) == '+') throw new UnexpectedSymbolException();
                 if (expression.charAt(i) == '-') throw new UnexpectedSymbolException();
                 if (expression.charAt(i) == '*') throw new UnexpectedSymbolException();
@@ -31,7 +29,6 @@ public class ExceptionHandler {
                 if (expression.charAt(i) == '(') throw new UnexpectedSymbolException();
             }
         }
-        return false;
     }
 
     private void unexpectedSymbol(char current, char next) throws UnexpectedSymbolException {
@@ -44,5 +41,9 @@ public class ExceptionHandler {
         if (current == ')' && next == '(') throw new UnexpectedSymbolException();
 
         if (current == '(' && next == ')') throw new UnexpectedSymbolException();
+    }
+
+    private void divisionByZero(char current, char next) {
+        if (current == '/' && next == '0') throw new ArithmeticException();
     }
 }
