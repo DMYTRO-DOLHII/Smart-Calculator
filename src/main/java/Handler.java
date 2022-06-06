@@ -84,7 +84,8 @@ public class Handler {
             String newNumber = "";
             String newExpression = "";
 
-            Pattern forNumbers = Pattern.compile("(\\d+(?:\\.\\d+)?)");
+//            Pattern forNumbers = Pattern.compile("(\\d+(?:\\.\\d+)?)");
+            Pattern forNumbers = Pattern.compile("/(\\d+(?:\\.\\d+)?)/");
             Pattern forSign = Pattern.compile("[+*/-]");
             Matcher matcherForNumbers = forNumbers.matcher(expression);
             Matcher matcherForSign = forSign.matcher(expression);
@@ -101,6 +102,8 @@ public class Handler {
             while (matcherForNumbers.find()) {
                 nums.add(matcherForNumbers.group());
             }
+
+            System.out.println("List of ");
 
             if (signs.contains("*")) {
                 if (signs.contains("/")) {

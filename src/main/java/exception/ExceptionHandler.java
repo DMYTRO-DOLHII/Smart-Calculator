@@ -33,6 +33,7 @@ public class ExceptionHandler {
     private void unexpectedSymbol(char current, char next) throws UnexpectedSymbolException {
         if (current == '+' || current == '-' || current == '*' || current == '/' || current == '(') {
             for (char unexpectedSymbol : unexpectedSymbols) {
+                if (current == '(' && unexpectedSymbol == '-') continue;
                 if (next == unexpectedSymbol) throw new UnexpectedSymbolException();
             }
         }

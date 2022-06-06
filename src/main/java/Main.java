@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        String expression = "(123/9.1)/(12346+111)+(15*(1/0.5)-1)";
+        String expression = "(-12)";
         Handler handler = new Handler();
 
         try{
