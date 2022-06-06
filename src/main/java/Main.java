@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 
 public class Main {
     public static void main(String[] args) {
-        String expression = "(-12)";
+        String expression = "123/1233*(1-1)";
         Handler handler = new Handler();
 
         try{

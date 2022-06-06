@@ -4,6 +4,7 @@ import exception.UnexpectedSymbolException;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,8 +14,6 @@ import java.util.regex.Pattern;
  * @author Dmytro Dolhii
  */
 public class Handler {
-
-
     private final ExceptionHandler exceptionHandler;
     private final Calculator calculator;
 
@@ -78,14 +77,15 @@ public class Handler {
     }
 
     private float solveSimpleExpression(String expression){
+
         try{
             return Float.parseFloat(expression);
         } catch(Exception e) {
             String newNumber = "";
             String newExpression = "";
 
-//            Pattern forNumbers = Pattern.compile("(\\d+(?:\\.\\d+)?)");
-            Pattern forNumbers = Pattern.compile("/(\\d+(?:\\.\\d+)?)/");
+            Pattern forNumbers = Pattern.compile("(\\d+(?:\\.\\d+)?)");
+//            Pattern forNumbers = Pattern.compile("/(\\d+(?:\\.\\d+)?)/");
             Pattern forSign = Pattern.compile("[+*/-]");
             Matcher matcherForNumbers = forNumbers.matcher(expression);
             Matcher matcherForSign = forSign.matcher(expression);
@@ -103,7 +103,21 @@ public class Handler {
                 nums.add(matcherForNumbers.group());
             }
 
-            System.out.println("List of ");
+            // Start debug expression
+            System.out.println("----------");
+            System.out.println("Current expression is : " + expression);
+            System.out.println("List of nums : " + nums.toString() + " | Size : " + nums.size());
+            System.out.println("List if signs : " + signs.toString() + " | Size : " + signs.size());
+            // End debug expression
+
+            if(signs.size() == nums.size()){
+                signs.remove(1);
+                String newS = "-".concat(nums.get(0));
+                nums.set(0, newS);
+                System.out.println(signs);
+                System.out.println(nums);
+            }
+
 
             if (signs.contains("*")) {
                 if (signs.contains("/")) {
