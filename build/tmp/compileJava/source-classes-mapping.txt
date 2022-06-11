@@ -1,12 +1,2 @@
-Calculator.java
- Calculator
-exception/ExceptionHandler.java
- exception.ExceptionHandler
-exception/UnexpectedSymbolException.java
- exception.UnexpectedSymbolException
-exception/NotArithmeticSymbolException.java
- exception.NotArithmeticSymbolException
-Main.java
- Main
-Handler.java
- Handler
+com/github/ddolgiy/Main.java
+ com.github.ddolgiy.Main
