@@ -1,2 +1,2 @@
-com/github/ddolgiy/Main.java
- com.github.ddolgiy.Main
+com/github/ddolgiy/statemachine/Main.java
+ com.github.ddolgiy.statemachine.Main
