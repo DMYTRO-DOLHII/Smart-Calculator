@@ -14,6 +14,8 @@ import java.util.Set;
 public class StateMachineSettings {
 
     private final Map<State, Set<State>> transitions;
+    private final Map<State, StateApplier> handlers;
+
     private State initialState;
 
     /**
@@ -21,15 +23,29 @@ public class StateMachineSettings {
      */
     public StateMachineSettings(){
         transitions = new HashMap<>();
-        initialState = new InitialState(null);
+        handlers = new HashMap<>();
+        initialState = new InitialState();
     }
 
-    public void stateSetUp(State state, Set<State> possibleStates){
+    /**
+     * Set up map where key is state and value is set of possible states that can be applied
+     * Set up map where key is state and value is state applier for this state
+     *
+     * @param state             Particular state
+     * @param possibleStates    Set of possible states that can be applied
+     * @param applier           State applier for particular state
+     */
+    public void stateSetUp(State state, Set<State> possibleStates, StateApplier applier){
         transitions.put(state, possibleStates);
+        handlers.put(state, applier);
     }
 
 
     public Set<State> getPossibleStates(State state){
         return transitions.get(state);
+    }
+
+    public StateApplier getApplier(State state){
+        return handlers.get(state);
     }
 }

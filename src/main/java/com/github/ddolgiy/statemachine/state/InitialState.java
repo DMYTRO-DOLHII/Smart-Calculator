@@ -5,7 +5,5 @@ import com.github.ddolgiy.statemachine.applier.StateApplier;
 public class InitialState extends State {
 
 
-    public InitialState(StateApplier applier) {
-        super(applier);
-    }
+
 }
