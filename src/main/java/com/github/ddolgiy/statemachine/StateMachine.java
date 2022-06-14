@@ -21,15 +21,14 @@ public class StateMachine {
                 new InitialState(),
                 Set.of(
                         new OperandState(),
-                        new OperatorState(),
                         new OpenParenthesisState()),
                 null);
 
         settings.stateSetUp(
                 new OperandState(),
                 Set.of(
-                        new OperandState(),
-                        new OperatorState()),
+                        new OperatorState(),
+                        new OperandState()),
                 new OperandStateApplier()
         );
 
@@ -55,8 +54,12 @@ public class StateMachine {
     }
 
 
-    public void launch(){
+    public void runStateMachine(){
 
+    }
+
+    public State tryToApplyState(){
+        return null;
     }
 
     public State applyState(){

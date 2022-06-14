@@ -27,6 +27,17 @@ public class Expression {
         index = 0;
     }
 
+    public String get(){
+        if(logger.isInfoEnabled()){
+            logger.info(
+                    "Getting character {"
+                    .concat(String.valueOf(expression.charAt(index)))
+                    .concat("} at position ").concat(String.valueOf(index)));
+        }
+
+        return String.valueOf(expression.charAt(index));
+    }
+
     /**
      * Gets character as a string on particular position
      *
@@ -46,7 +57,7 @@ public class Expression {
      * @return character as a string onn current index
      */
     public String cut(){
-        String res = String.valueOf(expression.charAt(index));
+        String res = String.valueOf(expression.charAt(index++));
 
         if (logger.isInfoEnabled()){
             logger.info("Cutting one character from the expression");
@@ -63,7 +74,7 @@ public class Expression {
      * @return string of character taken from expression
      */
     public String cut(int n){
-        String res = expression.substring(index, n);
+        String res = expression.substring(index++, n);
 
         if (logger.isInfoEnabled()){
             logger.info("Cutting " + n + "characters from the expression");
@@ -91,5 +102,9 @@ public class Expression {
      */
     public int position(){
         return index;
+    }
+
+    public boolean isNotEnd(){
+        return index == expression.length();
     }
 }

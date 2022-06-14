@@ -16,7 +16,6 @@ public class StateMachineSettings {
     private final Map<State, Set<State>> transitions;
     private final Map<State, StateApplier> handlers;
 
-    private State initialState;
 
     /**
      * Initialize new objects
@@ -24,7 +23,6 @@ public class StateMachineSettings {
     public StateMachineSettings(){
         transitions = new HashMap<>();
         handlers = new HashMap<>();
-        initialState = new InitialState();
     }
 
     /**
@@ -41,10 +39,22 @@ public class StateMachineSettings {
     }
 
 
+    /**
+     * Gets set of states which contains states that can be applied from current state
+     *
+     * @param state Particular state as a key in map
+     * @return      Possible set of states that can be next state
+     */
     public Set<State> getPossibleStates(State state){
         return transitions.get(state);
     }
 
+    /**
+     * Gets state applier for state that was given as argument
+     *
+     * @param state Particular state
+     * @return      State applier for given state
+     */
     public StateApplier getApplier(State state){
         return handlers.get(state);
     }

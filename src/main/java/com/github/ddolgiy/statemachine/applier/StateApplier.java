@@ -3,7 +3,13 @@ package com.github.ddolgiy.statemachine.applier;
 import com.github.ddolgiy.expressionhandler.Expression;
 import com.github.ddolgiy.statemachine.state.State;
 
-public interface StateApplier {
+abstract public class StateApplier {
 
-    public State apply(Expression expression);
+    protected String[] characters;
+
+    public StateApplier(String[] characters){
+        this.characters = characters;
+    }
+
+    public abstract State apply(Expression expression);
 }
