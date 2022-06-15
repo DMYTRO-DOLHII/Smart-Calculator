@@ -1,6 +1,8 @@
 package com.github.ddolgiy.statemachine.applier;
 
+import com.github.ddolgiy.exception.UnexpectedSymbolException;
 import com.github.ddolgiy.expressionhandler.Expression;
+import com.github.ddolgiy.expressionhandler.Handler;
 import com.github.ddolgiy.statemachine.state.State;
 
 abstract public class StateApplier {
@@ -11,5 +13,14 @@ abstract public class StateApplier {
         this.characters = characters;
     }
 
-    public abstract State apply(Expression expression);
+    public abstract State apply(Expression expression, Handler handler) throws UnexpectedSymbolException;
+
+    public boolean contains(String character){
+        for (String c : characters){
+            if (c.equals(character)){
+                return true;
+            }
+        }
+        return false;
+    }
 }

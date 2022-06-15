@@ -1,2 +1,2 @@
-CalculatorTest.java
- CalculatorTest
+com/github/ddolgiy/statemachine/applier/OperandStateApplierTest.java
+ com.github.ddolgiy.statemachine.applier.OperandStateApplierTest

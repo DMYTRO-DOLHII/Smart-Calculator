@@ -105,6 +105,6 @@ public class Expression {
     }
 
     public boolean isNotEnd(){
-        return index == expression.length();
+        return index != expression.length();
     }
 }

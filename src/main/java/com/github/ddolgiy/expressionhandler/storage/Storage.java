@@ -27,4 +27,12 @@ abstract public class Storage {
     public String removeOperator(int i){
         return operators.remove(i);
     }
+
+    public ArrayList<Double> getOperands(){
+        return operands;
+    }
+
+    public ArrayList<String> getOperators(){
+        return operators;
+    }
 }
