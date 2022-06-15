@@ -25,6 +25,7 @@ public class Expression {
     public Expression(String expression){
         this.expression = expression;
         index = 0;
+        System.out.println(index);
     }
 
     public String get(){

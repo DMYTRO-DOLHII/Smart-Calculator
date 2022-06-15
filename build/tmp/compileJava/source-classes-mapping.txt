@@ -18,21 +18,21 @@ com/github/ddolgiy/expressionhandler/Calculator.java
  com.github.ddolgiy.expressionhandler.Calculator
 com/github/ddolgiy/expressionhandler/Handler.java
  com.github.ddolgiy.expressionhandler.Handler
-com/github/ddolgiy/expressionhandler/Expression.java
- com.github.ddolgiy.expressionhandler.Expression
+com/github/ddolgiy/exception/UnexpectedSymbolException.java
+ com.github.ddolgiy.exception.UnexpectedSymbolException
 com/github/ddolgiy/statemachine/applier/StateApplier.java
  com.github.ddolgiy.statemachine.applier.StateApplier
+com/github/ddolgiy/expressionhandler/Expression.java
+ com.github.ddolgiy.expressionhandler.Expression
 com/github/ddolgiy/statemachine/applier/CloseParenthesisStateApplier.java
  com.github.ddolgiy.statemachine.applier.CloseParenthesisStateApplier
 com/github/ddolgiy/statemachine/applier/OperatorStateApplier.java
  com.github.ddolgiy.statemachine.applier.OperatorStateApplier
+com/github/ddolgiy/statemachine/StateMachineSettings.java
+ com.github.ddolgiy.statemachine.StateMachineSettings
+com/github/ddolgiy/statemachine/applier/OpenParenthesisStateApplier.java
+ com.github.ddolgiy.statemachine.applier.OpenParenthesisStateApplier
 com/github/ddolgiy/statemachine/applier/OperandStateApplier.java
  com.github.ddolgiy.statemachine.applier.OperandStateApplier
 com/github/ddolgiy/statemachine/StateMachine.java
  com.github.ddolgiy.statemachine.StateMachine
-com/github/ddolgiy/statemachine/applier/OpenParenthesisStateApplier.java
- com.github.ddolgiy.statemachine.applier.OpenParenthesisStateApplier
-com/github/ddolgiy/statemachine/StateMachineSettings.java
- com.github.ddolgiy.statemachine.StateMachineSettings
-com/github/ddolgiy/exception/UnexpectedSymbolException.java
- com.github.ddolgiy.exception.UnexpectedSymbolException
