@@ -2,37 +2,23 @@ package com.github.ddolgiy.expressionhandler.storage;
 
 import java.util.ArrayList;
 
-abstract public class Storage {
+abstract public class Storage<Content> {
 
-    private final ArrayList<Double> operands;
-    private final ArrayList<String> operators;
+    private final ArrayList<Content> storage;
 
     public Storage(){
-        operands = new ArrayList<>();
-        operators = new ArrayList<>();
+        storage = new ArrayList<>();
     }
 
-    public void addOperand(Double operand){
-        operands.add(operand);
+    public void add(Content content){
+        storage.add(content);
     }
 
-    public void addOperator(String operator){
-        operators.add(operator);
+    public Content remove(int i){
+        return storage.remove(i);
     }
 
-    public Double removeOperand(int i){
-        return operands.remove(i);
-    }
-
-    public String removeOperator(int i){
-        return operators.remove(i);
-    }
-
-    public ArrayList<Double> getOperands(){
-        return operands;
-    }
-
-    public ArrayList<String> getOperators(){
-        return operators;
+    public Content get(int i){
+        return storage.get(i);
     }
 }

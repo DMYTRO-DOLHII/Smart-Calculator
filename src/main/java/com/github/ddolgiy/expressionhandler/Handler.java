@@ -1,24 +1,17 @@
 package com.github.ddolgiy.expressionhandler;
 
-import com.github.ddolgiy.expressionhandler.storage.OperandsOperatorsStorage;
-
-import java.util.ArrayList;
+import com.github.ddolgiy.expressionhandler.storage.Operands;
+import com.github.ddolgiy.expressionhandler.storage.Operators;
 
 public class Handler {
 
-    private OperandsOperatorsStorage storage;
-    private Calculator calculator;
+    private final Operands operands;
+    private final Operators operators;
+    private final Calculator calculator;
 
     public Handler(){
-        storage = new OperandsOperatorsStorage();
+        operands = new Operands();
+        operators = new Operators();
         calculator = new Calculator();
-    }
-
-    public void addOperand(Double operand){
-        storage.addOperand(operand);
-    }
-
-    public ArrayList<Double> getOperands(){
-        return storage.getOperands();
     }
 }

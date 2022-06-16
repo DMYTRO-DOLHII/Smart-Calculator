@@ -83,4 +83,19 @@ public class OperandStateApplierTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void emptyExpressionTest(){
+        Expression expression = new Expression("");
+
+        Handler handler = new Handler();
+
+        OperandStateApplier operandStateApplier = new OperandStateApplier();
+
+        try {
+            State state = operandStateApplier.apply(expression, handler);
+        } catch (UnexpectedSymbolException e) {
+            e.printStackTrace();
+        }
+    }
 }

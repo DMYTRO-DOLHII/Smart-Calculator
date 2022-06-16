@@ -33,10 +33,8 @@ public class OperandStateApplier extends StateApplier {
 
 
         if (!operand.isEmpty()) {
-            System.out.println(operand);
             Double number = Double.parseDouble(operand.toString());
             handler.addOperand(number);
-            System.out.println(number);
             return new OperandState();
         }
 
