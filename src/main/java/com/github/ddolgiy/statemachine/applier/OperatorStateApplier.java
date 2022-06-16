@@ -10,7 +10,7 @@ public class OperatorStateApplier extends StateApplier {
     }
 
     @Override
-    public State apply(Expression expression, Handler handler) {
+    public State apply(Expression expression) {
         return null;
     }
 }

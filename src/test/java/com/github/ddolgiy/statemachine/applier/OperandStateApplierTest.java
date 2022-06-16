@@ -18,7 +18,8 @@ public class OperandStateApplierTest {
         OperandStateApplier operandStateApplier = new OperandStateApplier();
 
         try {
-            State state = operandStateApplier.apply(expression, handler);
+            State state = operandStateApplier.apply(expression);
+            System.out.println(state.get());
         } catch (UnexpectedSymbolException e) {
             e.printStackTrace();
         }
@@ -33,7 +34,8 @@ public class OperandStateApplierTest {
         OperandStateApplier operandStateApplier = new OperandStateApplier();
 
         try {
-            State state = operandStateApplier.apply(expression, handler);
+            State state = operandStateApplier.apply(expression);
+            System.out.println(state.get());
         } catch (UnexpectedSymbolException e) {
             e.printStackTrace();
         }
@@ -48,7 +50,8 @@ public class OperandStateApplierTest {
         OperandStateApplier operandStateApplier = new OperandStateApplier();
 
         try {
-            State state = operandStateApplier.apply(expression, handler);
+            State state = operandStateApplier.apply(expression);
+            System.out.println(state.get());
         } catch (UnexpectedSymbolException e) {
             e.printStackTrace();
         }
@@ -63,7 +66,8 @@ public class OperandStateApplierTest {
         OperandStateApplier operandStateApplier = new OperandStateApplier();
 
         try {
-            State state = operandStateApplier.apply(expression, handler);
+            State state = operandStateApplier.apply(expression);
+            System.out.println(state.get());
         } catch (UnexpectedSymbolException e) {
             e.printStackTrace();
         }
@@ -78,7 +82,8 @@ public class OperandStateApplierTest {
         OperandStateApplier operandStateApplier = new OperandStateApplier();
 
         try {
-            State state = operandStateApplier.apply(expression, handler);
+            State state = operandStateApplier.apply(expression);
+            System.out.println(state.get());
         } catch (UnexpectedSymbolException e) {
             e.printStackTrace();
         }
@@ -93,7 +98,8 @@ public class OperandStateApplierTest {
         OperandStateApplier operandStateApplier = new OperandStateApplier();
 
         try {
-            State state = operandStateApplier.apply(expression, handler);
+            State state = operandStateApplier.apply(expression);
+            System.out.println(state.get());
         } catch (UnexpectedSymbolException e) {
             e.printStackTrace();
         }

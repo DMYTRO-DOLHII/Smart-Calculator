@@ -15,7 +15,7 @@ public class OperandStateApplier extends StateApplier {
     }
 
     @Override
-    public State apply(Expression expression, Handler handler) throws UnexpectedSymbolException {
+    public State apply(Expression expression) throws UnexpectedSymbolException {
         StringBuilder operand = new StringBuilder();
 
         if (expression.getExpression().startsWith("-")) {
@@ -34,8 +34,9 @@ public class OperandStateApplier extends StateApplier {
 
         if (!operand.isEmpty()) {
             Double number = Double.parseDouble(operand.toString());
-            handler.addOperand(number);
-            return new OperandState();
+            OperandState state = new OperandState();
+            state.set(number);
+            return state;
         }
 
         return null;

@@ -13,7 +13,7 @@ abstract public class StateApplier {
         this.characters = characters;
     }
 
-    public abstract State apply(Expression expression, Handler handler) throws UnexpectedSymbolException;
+    public abstract State apply(Expression expression) throws UnexpectedSymbolException;
 
     public boolean contains(String character){
         for (String c : characters){
