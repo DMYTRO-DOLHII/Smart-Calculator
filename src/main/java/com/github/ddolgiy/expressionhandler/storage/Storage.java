@@ -21,4 +21,8 @@ abstract public class Storage<Content> {
     public Content get(int i){
         return storage.get(i);
     }
+
+    public int size(){
+        return storage.size();
+    }
 }

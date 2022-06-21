@@ -9,25 +9,35 @@ public class Handler {
     private final Operators operators;
     private final Calculator calculator;
 
-    public Handler(){
+    public Handler() {
         operands = new Operands();
         operators = new Operators();
         calculator = new Calculator();
     }
 
-    public void addOperand(Double operand){
-        operands.add(operand);
+    public void add(String str) {
+        if (str.length() > 1) {
+            operands.add(Double.parseDouble(str));
+        } else {
+            operators.add(str);
+        }
     }
 
-    public Double removeOperand(int i){
+    public Double removeOperand(int i) {
         return operands.remove(i);
     }
 
-    public void addOperator(String operator){
-        operators.add(operator);
+    public String removeOperator(int i) {
+        return operators.remove(i);
     }
 
-    public String removeOperator(int i){
-        return operators.remove(i);
+    public Double solve() {
+        while (operators.size() != 0) {
+            for (int i = 0; i < operators.size(); i++) {
+
+            }
+        }
+
+        return 0.;
     }
 }

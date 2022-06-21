@@ -16,6 +16,8 @@ public class StateMachineSettings {
     private final Map<State, Set<State>> transitions;
     private final Map<State, StateApplier> handlers;
 
+    private final State initState;
+
 
     /**
      * Initialize new objects
@@ -23,6 +25,7 @@ public class StateMachineSettings {
     public StateMachineSettings(){
         transitions = new HashMap<>();
         handlers = new HashMap<>();
+        initState = new InitialState();
     }
 
     /**
@@ -57,5 +60,9 @@ public class StateMachineSettings {
      */
     public StateApplier getApplier(State state){
         return handlers.get(state);
+    }
+
+    public State getInitState() {
+        return initState;
     }
 }

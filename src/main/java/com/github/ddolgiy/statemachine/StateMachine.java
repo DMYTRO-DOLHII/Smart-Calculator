@@ -1,5 +1,8 @@
 package com.github.ddolgiy.statemachine;
 
+import com.github.ddolgiy.exception.UnexpectedSymbolException;
+import com.github.ddolgiy.expressionhandler.Expression;
+import com.github.ddolgiy.expressionhandler.Handler;
 import com.github.ddolgiy.statemachine.applier.OpenParenthesisStateApplier;
 import com.github.ddolgiy.statemachine.applier.OperandStateApplier;
 import com.github.ddolgiy.statemachine.applier.OperatorStateApplier;
@@ -10,8 +13,7 @@ import java.util.Set;
 public class StateMachine {
 
     private final StateMachineSettings settings;
-
-    private State currentState;
+    private final Handler handler;
 
 
     public StateMachine() {
@@ -28,7 +30,7 @@ public class StateMachine {
                 new OperandState(),
                 Set.of(
                         new OperatorState(),
-                        new OperandState()),
+                        new FinishState()),
                 new OperandStateApplier()
         );
 
@@ -46,25 +48,25 @@ public class StateMachine {
                 new OpenParenthesisStateApplier()
         );
 
-        currentState = new InitialState();
-    }
-
-    public State getCurrentState() {
-        return currentState;
+        handler = new Handler();
     }
 
 
-    public void runStateMachine(){
+    public void run() {
+        State appliedState = settings.getInitState();
+
+
 
     }
 
-    public State tryToApplyState(){
+    public State tryToApplyNextState(State state, Expression expression) throws UnexpectedSymbolException {
+        for (State possible : settings.getPossibleStates(state)) {
+            State next = settings.getApplier(possible).apply(expression);
+
+            if (next != null) {
+                return next;
+            }
+        }
         return null;
     }
-
-    public State applyState(){
-        return null;
-    }
-
-
 }
