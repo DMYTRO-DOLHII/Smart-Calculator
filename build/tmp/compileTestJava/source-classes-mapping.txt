@@ -1,2 +1,2 @@
-com/github/ddolgiy/statemachine/applier/OperandStateApplierTest.java
- com.github.ddolgiy.statemachine.applier.OperandStateApplierTest
+com/github/ddolgiy/statemachine/StateMachineTest.java
+ com.github.ddolgiy.statemachine.StateMachineTest

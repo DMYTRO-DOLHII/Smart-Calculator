@@ -1,7 +1,5 @@
 com/github/ddolgiy/expressionhandler/Expression.java
  com.github.ddolgiy.expressionhandler.Expression
-com/github/ddolgiy/expressionhandler/Calculator.java
- com.github.ddolgiy.expressionhandler.Calculator
 com/github/ddolgiy/exception/UnexpectedSymbolException.java
  com.github.ddolgiy.exception.UnexpectedSymbolException
 com/github/ddolgiy/statemachine/state/OperandState.java
@@ -16,6 +14,10 @@ com/github/ddolgiy/expressionhandler/storage/Operators.java
  com.github.ddolgiy.expressionhandler.storage.Operators
 com/github/ddolgiy/statemachine/state/OperatorState.java
  com.github.ddolgiy.statemachine.state.OperatorState
+com/github/ddolgiy/statemachine/applier/FinishStateApplier.java
+ com.github.ddolgiy.statemachine.applier.FinishStateApplier
+com/github/ddolgiy/exception/UnresolvedException.java
+ com.github.ddolgiy.exception.UnresolvedException
 com/github/ddolgiy/statemachine/state/OpenParenthesisState.java
  com.github.ddolgiy.statemachine.state.OpenParenthesisState
 com/github/ddolgiy/statemachine/applier/OpenParenthesisStateApplier.java
@@ -26,6 +28,10 @@ com/github/ddolgiy/expressionhandler/Handler.java
  com.github.ddolgiy.expressionhandler.Handler
 com/github/ddolgiy/statemachine/applier/StateApplier.java
  com.github.ddolgiy.statemachine.applier.StateApplier
+com/github/ddolgiy/statemachine/state/FinishState.java
+ com.github.ddolgiy.statemachine.state.FinishState
+com/github/ddolgiy/expressionhandler/Calculator.java
+ com.github.ddolgiy.expressionhandler.Calculator
 com/github/ddolgiy/statemachine/applier/OperatorStateApplier.java
  com.github.ddolgiy.statemachine.applier.OperatorStateApplier
 com/github/ddolgiy/statemachine/applier/OperandStateApplier.java

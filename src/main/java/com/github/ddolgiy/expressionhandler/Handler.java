@@ -3,6 +3,8 @@ package com.github.ddolgiy.expressionhandler;
 import com.github.ddolgiy.expressionhandler.storage.Operands;
 import com.github.ddolgiy.expressionhandler.storage.Operators;
 
+import java.util.ArrayList;
+
 public class Handler {
 
     private final Operands operands;
@@ -39,5 +41,13 @@ public class Handler {
         }
 
         return 0.;
+    }
+
+    public ArrayList<Double> getOperands(){
+        return operands.getStorage();
+    }
+
+    public ArrayList<String> getOperators(){
+        return operators.getStorage();
     }
 }
