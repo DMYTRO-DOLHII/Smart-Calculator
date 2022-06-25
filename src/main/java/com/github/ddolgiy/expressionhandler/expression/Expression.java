@@ -1,4 +1,4 @@
-package com.github.ddolgiy.expressionhandler;
+package com.github.ddolgiy.expressionhandler.expression;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

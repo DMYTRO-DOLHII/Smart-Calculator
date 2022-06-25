@@ -1,7 +1,6 @@
 package com.github.ddolgiy.statemachine;
 
 import com.github.ddolgiy.statemachine.applier.StateApplier;
-import com.github.ddolgiy.statemachine.state.InitialState;
 import com.github.ddolgiy.statemachine.state.State;
 
 import java.util.HashMap;
@@ -19,13 +18,10 @@ public class StateMachineSettings {
     private final State initState;
 
 
-    /**
-     * Initialize new objects
-     */
     public StateMachineSettings(){
         transitions = new HashMap<>();
         handlers = new HashMap<>();
-        initState = new InitialState();
+        initState = State.INITIAL;
     }
 
     /**

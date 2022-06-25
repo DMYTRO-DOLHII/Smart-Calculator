@@ -1,10 +1,7 @@
 package com.github.ddolgiy.statemachine.applier;
 
 import com.github.ddolgiy.exception.UnexpectedSymbolException;
-import com.github.ddolgiy.expressionhandler.Expression;
-import com.github.ddolgiy.expressionhandler.Handler;
-import com.github.ddolgiy.statemachine.state.OperandState;
-import com.github.ddolgiy.statemachine.state.State;
+import com.github.ddolgiy.expressionhandler.expression.Expression;
 
 public class OperandStateApplier extends StateApplier {
 
@@ -15,7 +12,7 @@ public class OperandStateApplier extends StateApplier {
     }
 
     @Override
-    public State apply(Expression expression) throws UnexpectedSymbolException {
+    public String apply(Expression expression) throws UnexpectedSymbolException {
         StringBuilder operand = new StringBuilder();
 
         if (expression.getExpression().startsWith("-")) {
@@ -33,9 +30,7 @@ public class OperandStateApplier extends StateApplier {
 
 
         if (!operand.isEmpty()) {
-            OperandState state = new OperandState();
-            state.set(operand.toString());
-            return state;
+            return operand.toString();
         }
 
         return null;

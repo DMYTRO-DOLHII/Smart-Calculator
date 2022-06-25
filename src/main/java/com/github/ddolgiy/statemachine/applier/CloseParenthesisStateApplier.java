@@ -1,8 +1,6 @@
 package com.github.ddolgiy.statemachine.applier;
 
-import com.github.ddolgiy.expressionhandler.Expression;
-import com.github.ddolgiy.expressionhandler.Handler;
-import com.github.ddolgiy.statemachine.state.State;
+import com.github.ddolgiy.expressionhandler.expression.Expression;
 
 public class CloseParenthesisStateApplier extends StateApplier {
     public CloseParenthesisStateApplier() {
@@ -10,7 +8,7 @@ public class CloseParenthesisStateApplier extends StateApplier {
     }
 
     @Override
-    public State apply(Expression expression) {
+    public String apply(Expression expression) {
         return null;
     }
 }
