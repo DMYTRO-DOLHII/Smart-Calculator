@@ -4,10 +4,6 @@ import com.github.ddolgiy.exception.UnexpectedSymbolException;
 import com.github.ddolgiy.exception.UnresolvedException;
 import com.github.ddolgiy.expressionhandler.expression.Expression;
 import com.github.ddolgiy.expressionhandler.Handler;
-import com.github.ddolgiy.statemachine.applier.FinishStateApplier;
-import com.github.ddolgiy.statemachine.applier.OpenParenthesisStateApplier;
-import com.github.ddolgiy.statemachine.applier.OperandStateApplier;
-import com.github.ddolgiy.statemachine.applier.OperatorStateApplier;
 import com.github.ddolgiy.statemachine.state.*;
 
 import java.util.Set;
@@ -44,10 +40,7 @@ public class StateMachine {
 
     public State tryToApplyNextState(Set<State> nextStates, Expression expression) throws UnexpectedSymbolException {
         for (State possibleState : nextStates) {
-            String output = settings.getApplier(possibleState).apply(expression);
-
-            if (output != null) {
-                handler.add(output);
+            if (settings.getApplier(possibleState).apply(expression, handler) != null) {
                 return possibleState;
             }
         }

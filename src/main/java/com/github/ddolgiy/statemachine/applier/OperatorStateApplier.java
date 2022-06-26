@@ -1,6 +1,8 @@
 package com.github.ddolgiy.statemachine.applier;
 
+import com.github.ddolgiy.expressionhandler.Handler;
 import com.github.ddolgiy.expressionhandler.expression.Expression;
+import com.github.ddolgiy.statemachine.state.State;
 
 public class OperatorStateApplier extends StateApplier {
 
@@ -9,10 +11,11 @@ public class OperatorStateApplier extends StateApplier {
     }
 
     @Override
-    public String apply(Expression expression) {
+    public State apply(Expression expression, Handler handler) {
 
         if (expression.isNotEnd() && contains(expression.get())) {
-            return expression.cut();
+            handler.add(expression.cut());
+            return State.OPERATOR;
         }
         return null;
     }

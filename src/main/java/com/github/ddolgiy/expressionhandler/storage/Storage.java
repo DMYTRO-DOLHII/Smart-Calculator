@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 abstract public class Storage<Content> {
 
-    private final ArrayList<Content> storage;
+    protected final ArrayList<Content> storage;
 
     public Storage(){
         storage = new ArrayList<>();

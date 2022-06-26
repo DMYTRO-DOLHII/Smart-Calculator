@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
  */
 public class Expression {
 
-    private final static Logger logger = LoggerFactory.getLogger(Expression.class);
 
     private final String expression;
 
@@ -29,12 +28,7 @@ public class Expression {
     }
 
     public String get(){
-        if(logger.isInfoEnabled()){
-            logger.info(
-                    "Getting character {"
-                    .concat(String.valueOf(expression.charAt(index)))
-                    .concat("} at position ").concat(String.valueOf(index)));
-        }
+
 
         return String.valueOf(expression.charAt(index));
     }
@@ -46,9 +40,7 @@ public class Expression {
      * @return character as a string
      */
     public String get(int i){
-        if (logger.isInfoEnabled()){
-            logger.info("Get character : " + expression.charAt(i) + " at position : " + i);
-        }
+
         return String.valueOf(expression.charAt(i));
     }
 
@@ -60,10 +52,7 @@ public class Expression {
     public String cut(){
         String res = String.valueOf(expression.charAt(index++));
 
-        if (logger.isInfoEnabled()){
-            logger.info("Cutting one character from the expression");
-            logger.info("Returned string : " + res);
-        }
+
 
         return res;
     }
@@ -77,10 +66,7 @@ public class Expression {
     public String cut(int n){
         String res = expression.substring(index++, n);
 
-        if (logger.isInfoEnabled()){
-            logger.info("Cutting " + n + "characters from the expression");
-            logger.info("Returned string : " + res);
-        }
+
 
         return res;
     }

@@ -1,21 +1,14 @@
 package com.github.ddolgiy.statemachine.state;
 
-import com.github.ddolgiy.statemachine.applier.StateApplier;
+public enum State {
+    INITIAL,
 
-abstract public class State {
 
-    private String content;
+    OPERAND,
+    OPERATOR,
+    OPEN_PARENTHESIS,
+    CLOSE_PARENTHESIS,
 
-    public void set(String content){
-        this.content = content;
-    }
 
-    public String get(){
-        return content;
-    }
-
-    public boolean containsResult(){
-        return content != null;
-    }
-
+    FINISH
 }

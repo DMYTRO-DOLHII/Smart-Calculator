@@ -1,5 +1,8 @@
 package com.github.ddolgiy;
 
+import com.github.ddolgiy.exception.UnexpectedSymbolException;
+import com.github.ddolgiy.exception.UnresolvedException;
+import com.github.ddolgiy.expressionhandler.expression.Expression;
 import com.github.ddolgiy.statemachine.StateMachine;
 import com.github.ddolgiy.statemachine.StateMachineSettings;
 import com.github.ddolgiy.statemachine.applier.FinishStateApplier;
@@ -51,5 +54,14 @@ public class StateMachineExecutor {
         );
 
         globalStateMachine = new StateMachine(settings);
+    }
+
+    public void execute(Expression expression){
+        try {
+            globalStateMachine.run(expression);
+        } catch (UnexpectedSymbolException | UnresolvedException e) {
+            e.printStackTrace();
+            System.out.println("Error has been found");
+        }
     }
 }
