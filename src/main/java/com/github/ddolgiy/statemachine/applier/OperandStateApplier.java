@@ -24,7 +24,10 @@ public class OperandStateApplier extends StateApplier {
         while (expression.isNotEnd() && contains(expression.get())) {
             if(expression.get().equals(".")){
                 if (isDouble) throw new UnexpectedSymbolException();
-                else isDouble = true;
+                else {
+                    isDouble = true;
+                    operand.append(expression.cut());
+                }
             } else {
                 operand.append(expression.cut());
             }

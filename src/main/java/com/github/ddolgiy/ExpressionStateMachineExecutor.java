@@ -13,11 +13,11 @@ import com.github.ddolgiy.statemachine.state.State;
 
 import java.util.Set;
 
-public class StateMachineExecutor {
+public class ExpressionStateMachineExecutor {
 
     private final StateMachine globalStateMachine;
 
-    public StateMachineExecutor(){
+    public ExpressionStateMachineExecutor(){
         StateMachineSettings settings = new StateMachineSettings();
 
         settings.stateSetUp(
@@ -63,5 +63,9 @@ public class StateMachineExecutor {
             e.printStackTrace();
             System.out.println("Error has been found");
         }
+    }
+
+    public void printResult(){
+        System.out.println(globalStateMachine.getResult());
     }
 }

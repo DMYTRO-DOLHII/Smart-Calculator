@@ -13,6 +13,8 @@ public class StateMachine {
     private final StateMachineSettings settings;
     private final Handler handler;
 
+    private Double result;
+
 
     public StateMachine(StateMachineSettings settings) {
         this.settings = settings;
@@ -35,7 +37,7 @@ public class StateMachine {
 
         }
 
-
+        result = handler.solve();
     }
 
     public State tryToApplyNextState(Set<State> nextStates, Expression expression) throws UnexpectedSymbolException {
@@ -46,5 +48,9 @@ public class StateMachine {
         }
 
         return null;
+    }
+
+    public Double getResult(){
+        return result;
     }
 }
