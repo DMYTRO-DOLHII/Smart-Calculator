@@ -13,12 +13,14 @@ public class StateMachine {
     private final StateMachineSettings settings;
     private final Handler handler;
 
+    private final State initState;
     private Double result;
 
 
     public StateMachine(StateMachineSettings settings) {
         this.settings = settings;
         handler = new Handler();
+        initState = State.INITIAL;
     }
 
 

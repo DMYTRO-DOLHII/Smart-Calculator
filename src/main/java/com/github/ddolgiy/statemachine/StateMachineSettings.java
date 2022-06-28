@@ -24,6 +24,7 @@ public class StateMachineSettings {
         initState = State.INITIAL;
     }
 
+
     /**
      * Set up map where key is state and value is set of possible states that can be applied
      * Set up map where key is state and value is state applier for this state

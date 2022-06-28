@@ -44,19 +44,16 @@ public class Handler {
                     case "*":
                         calculator.multiply(operands.get(i), operands.get(i + 1));
                         isCalculated = true;
-                        System.out.println(operands.get(i) + " * " + operands.get(i + 1));
                         break;
                     case "/":
                         calculator.division(operands.get(i), operands.get(i + 1));
                         isCalculated = true;
-                        System.out.println(operands.get(i) + " / " + operands.get(i + 1));
                         break;
                     case "+":
                         if (i < operators.size() - 1) {
                             if (operators.get(i + 1).equals("+") || operators.get(i + 1).equals("-")) {
                                 calculator.plus(operands.get(i), operands.get(i + 1));
                                 isCalculated = true;
-                                System.out.println(operands.get(i) + " + " + operands.get(i + 1));
                             }
                         } else {
                             calculator.plus(operands.get(i), operands.get(i + 1));
@@ -69,7 +66,6 @@ public class Handler {
                                 if(operands.get(i + 1) == 0);
                                 calculator.minus(operands.get(i), operands.get(i + 1));
                                 isCalculated = true;
-                                System.out.println(operands.get(i) + " - " + operands.get(i + 1));
                             }
                         } else {
                             calculator.minus(operands.get(i), operands.get(i + 1));
@@ -78,7 +74,6 @@ public class Handler {
                         break;
                 }
 
-//                System.out.println("Result : "  +calculator.getLastResult());
 
                 if (isCalculated) {
                     operators.remove(i);
