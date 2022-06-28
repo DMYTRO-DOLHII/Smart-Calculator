@@ -14,6 +14,7 @@ public class OperatorStateApplier extends StateApplier {
     public State apply(Expression expression, Handler handler) {
 
         if (expression.isNotEnd() && contains(expression.get())) {
+            System.out.println("Found in expression operator : " + expression.get());
             handler.add(expression.cut());
             return State.OPERATOR;
         }

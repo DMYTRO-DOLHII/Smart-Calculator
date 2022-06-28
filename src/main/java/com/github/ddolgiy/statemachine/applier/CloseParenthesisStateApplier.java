@@ -11,6 +11,12 @@ public class CloseParenthesisStateApplier extends StateApplier {
 
     @Override
     public State apply(Expression expression, Handler handler) {
+
+        if(contains(expression.get())){
+            expression.cut();
+            return State.CLOSE_PARENTHESIS;
+        }
+
         return null;
     }
 }

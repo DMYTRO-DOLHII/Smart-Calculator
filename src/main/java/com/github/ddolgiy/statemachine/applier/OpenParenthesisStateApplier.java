@@ -21,7 +21,9 @@ public class OpenParenthesisStateApplier extends StateApplier {
     @Override
     public State apply(Expression expression, Handler handler) {
 
-        if (contains(expression.get())){
+
+        if (contains(expression.get())) {
+            expression.cut();
 
             StateMachineSettings settings = new StateMachineSettings();
 
@@ -45,13 +47,18 @@ public class OpenParenthesisStateApplier extends StateApplier {
             );
 
             settings.stateSetUp(
+                    State.OPEN_PARENTHESIS,
+                    Set.of(State.OPERATOR, State.CLOSE_PARENTHESIS),
+                    new OpenParenthesisStateApplier()
+            );
+
+            settings.stateSetUp(
                     State.CLOSE_PARENTHESIS,
                     Set.of(),
                     new CloseParenthesisStateApplier()
             );
 
             internalSteteMachine = new StateMachine(settings);
-
 
             try {
                 internalSteteMachine.run(expression);

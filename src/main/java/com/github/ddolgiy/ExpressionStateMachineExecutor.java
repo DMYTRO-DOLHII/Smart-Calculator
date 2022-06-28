@@ -22,7 +22,7 @@ public class ExpressionStateMachineExecutor {
 
         settings.stateSetUp(
                 State.INITIAL,
-                Set.of(State.OPERAND),
+                Set.of(State.OPERAND, State.OPEN_PARENTHESIS),
                 null);
 
         settings.stateSetUp(
@@ -43,7 +43,7 @@ public class ExpressionStateMachineExecutor {
 
         settings.stateSetUp(
                 State.OPEN_PARENTHESIS,
-                Set.of(State.OPERAND),
+                Set.of(State.OPERATOR, State.FINISH),
                 new OpenParenthesisStateApplier()
         );
 
@@ -61,7 +61,6 @@ public class ExpressionStateMachineExecutor {
             globalStateMachine.run(expression);
         } catch (UnexpectedSymbolException | UnresolvedException e) {
             e.printStackTrace();
-            System.out.println("Error has been found");
         }
     }
 

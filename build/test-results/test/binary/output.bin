@@ -1,0 +1,42 @@
+0
+$Found in expression operand : 8173
+%State { OPERAND } have been applied
+"Found in expression operator : -
+&State { OPERATOR } have been applied
+%Found in expression operand : 17739
+%State { OPERAND } have been applied
+"Found in expression operator : +
+&State { OPERATOR } have been applied
+#Found in expression operand : 928
+%State { OPERAND } have been applied
+"Found in expression operator : /
+&State { OPERATOR } have been applied
+#Found in expression operand : 222
+%State { OPERAND } have been applied
+"Found in expression operator : +
+&State { OPERATOR } have been applied
+"Found in expression operand : 19
+%State { OPERAND } have been applied
+"Found in expression operator : *
+&State { OPERATOR } have been applied
+#Found in expression operand : 154
+%State { OPERAND } have been applied
+/State { CLOSE_PARENTHESIS } have been applied
+ 928.0/222.0 = 4.18018018018018
+19.0*154.0 = 2926.0
+.17739.0+4.18018018018018 = 17743.18018018018
+.17743.18018018018+2926.0 = 20669.18018018018
+.State { OPEN_PARENTHESIS } have been applied
+"Found in expression operator : /
+&State { OPERATOR } have been applied
+#Found in expression operand : 554
+%State { OPERAND } have been applied
+"Found in expression operator : -
+&State { OPERATOR } have been applied
+$Found in expression operand : 1000
+%State { OPERAND } have been applied
+$State { FINISH } have been applied
+-20669.18018018018/554.0 = 37.30898949491007
+/37.30898949491007-1000.0 = -962.6910105050899
+.8173.0--962.6910105050899 = 9135.69101050509
+9135.69101050509

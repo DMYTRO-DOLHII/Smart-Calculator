@@ -17,7 +17,7 @@ public class OperandStateApplier extends StateApplier {
     public State apply(Expression expression, Handler handler) throws UnexpectedSymbolException {
         StringBuilder operand = new StringBuilder();
 
-        if (expression.getExpression().startsWith("-")) {
+        if (expression.get().equals("-")) {
             operand.append(expression.cut());
         }
 
@@ -37,6 +37,8 @@ public class OperandStateApplier extends StateApplier {
         if (!operand.isEmpty()) {
             Double res = Double.parseDouble(operand.toString());
             handler.add(res);
+
+            System.out.println("Found in expression operand : " + operand);
             return State.OPERAND;
         }
 

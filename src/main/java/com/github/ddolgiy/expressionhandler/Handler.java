@@ -75,10 +75,13 @@ public class Handler {
                 }
 
 
+
                 if (isCalculated) {
+                    System.out.println(operands.get(i) + operators.get(i) + operands.get(i + 1) + " = " + calculator.getLastResult());
                     operators.remove(i);
                     operands.remove(i + 1);
                     operands.replace(i, calculator.getLastResult());
+                    i--;
                 }
             }
         }

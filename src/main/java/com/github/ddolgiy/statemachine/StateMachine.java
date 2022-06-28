@@ -45,6 +45,7 @@ public class StateMachine {
     public State tryToApplyNextState(Set<State> nextStates, Expression expression) throws UnexpectedSymbolException {
         for (State possibleState : nextStates) {
             if (settings.getApplier(possibleState).apply(expression, handler) != null) {
+                System.out.println("State { " + possibleState + " } have been applied");
                 return possibleState;
             }
         }
