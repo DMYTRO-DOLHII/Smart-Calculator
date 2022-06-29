@@ -81,7 +81,7 @@ public class Handler {
                     operators.remove(i);
                     operands.remove(i + 1);
                     operands.replace(i, calculator.getLastResult());
-                    i--;
+                    break;
                 }
             }
         }
