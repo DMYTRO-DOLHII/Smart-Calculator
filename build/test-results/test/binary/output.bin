@@ -1,4 +1,3 @@
-0
 $Found in expression operand : 8173
 %State { OPERAND } have been applied
 "Found in expression operator : -
@@ -23,8 +22,8 @@
 %State { OPERAND } have been applied
 /State { CLOSE_PARENTHESIS } have been applied
  928.0/222.0 = 4.18018018018018
-19.0*154.0 = 2926.0
 .17739.0+4.18018018018018 = 17743.18018018018
+19.0*154.0 = 2926.0
 .17743.18018018018+2926.0 = 20669.18018018018
 .State { OPEN_PARENTHESIS } have been applied
 "Found in expression operator : /
@@ -37,6 +36,98 @@
 %State { OPERAND } have been applied
 $State { FINISH } have been applied
 -20669.18018018018/554.0 = 37.30898949491007
-/37.30898949491007-1000.0 = -962.6910105050899
-.8173.0--962.6910105050899 = 9135.69101050509
-9135.69101050509
+-8173.0-37.30898949491007 = 8135.69101050509
+,8135.69101050509-1000.0 = 7135.69101050509
+$Found in expression operand : 1414
+%State { OPERAND } have been applied
+"Found in expression operator : +
+&State { OPERATOR } have been applied
+$Found in expression operand : 3849
+%State { OPERAND } have been applied
+"Found in expression operator : *
+&State { OPERATOR } have been applied
+"Found in expression operand : 10
+%State { OPERAND } have been applied
+"Found in expression operator : /
+&State { OPERATOR } have been applied
+$Found in expression operand : 1111
+%State { OPERAND } have been applied
+"Found in expression operator : -
+&State { OPERATOR } have been applied
+"Found in expression operand : 14
+%State { OPERAND } have been applied
+$State { FINISH } have been applied
+3849.0*10.0 = 38490.0
+%38490.0/1111.0 = 34.644464446444644
+01414.0+34.644464446444644 = 1448.6444644464445
+.1448.6444644464445-14.0 = 1434.6444644464445
+!Found in expression operand : 2
+%State { OPERAND } have been applied
+"Found in expression operator : +
+&State { OPERATOR } have been applied
+!Found in expression operand : 2
+%State { OPERAND } have been applied
+"Found in expression operator : *
+&State { OPERATOR } have been applied
+!Found in expression operand : 2
+%State { OPERAND } have been applied
+$State { FINISH } have been applied
+2.0*2.0 = 4.0
+2.0+4.0 = 6.0
+"Found in expression operand : -4
+%State { OPERAND } have been applied
+"Found in expression operator : +
+&State { OPERATOR } have been applied
+!Found in expression operand : 4
+%State { OPERAND } have been applied
+$State { FINISH } have been applied
+-4.0+4.0 = 0.0
+!Found in expression operand : 2
+%State { OPERAND } have been applied
+"Found in expression operator : +
+&State { OPERATOR } have been applied
+"Found in expression operand : -2
+%State { OPERAND } have been applied
+/State { CLOSE_PARENTHESIS } have been applied
+.State { OPEN_PARENTHESIS } have been applied
+$State { FINISH } have been applied
+2.0+-2.0 = 0.0
+!Found in expression operand : 5
+%State { OPERAND } have been applied
+"Found in expression operator : -
+&State { OPERATOR } have been applied
+!Found in expression operand : 2
+%State { OPERAND } have been applied
+"Found in expression operator : +
+&State { OPERATOR } have been applied
+"Found in expression operand : -2
+%State { OPERAND } have been applied
+/State { CLOSE_PARENTHESIS } have been applied
+.State { OPEN_PARENTHESIS } have been applied
+/State { CLOSE_PARENTHESIS } have been applied
+2.0+-2.0 = 0.0
+.State { OPEN_PARENTHESIS } have been applied
+"Found in expression operator : *
+&State { OPERATOR } have been applied
+!Found in expression operand : 3
+%State { OPERAND } have been applied
+$State { FINISH } have been applied
+0.0*3.0 = 0.0
+5.0-0.0 = 5.0
+!Found in expression operand : 2
+%State { OPERAND } have been applied
+"Found in expression operator : +
+&State { OPERATOR } have been applied
+!Found in expression operand : 2
+%State { OPERAND } have been applied
+/State { CLOSE_PARENTHESIS } have been applied
+2.0+2.0 = 4.0
+.State { OPEN_PARENTHESIS } have been applied
+"Found in expression operator : *
+&State { OPERATOR } have been applied
+!Found in expression operand : 2
+%State { OPERAND } have been applied
+/State { CLOSE_PARENTHESIS } have been applied
+4.0*2.0 = 8.0
+.State { OPEN_PARENTHESIS } have been applied
+$State { FINISH } have been applied
