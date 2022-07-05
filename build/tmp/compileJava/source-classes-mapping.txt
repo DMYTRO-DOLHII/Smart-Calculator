@@ -2,8 +2,8 @@ com/github/ddolgiy/expressionhandler/storage/Storage.java
  com.github.ddolgiy.expressionhandler.storage.Storage
 com/github/ddolgiy/expressionhandler/Calculator.java
  com.github.ddolgiy.expressionhandler.Calculator
-com/github/ddolgiy/expressionhandler/expression/Expression.java
- com.github.ddolgiy.expressionhandler.expression.Expression
+com/github/ddolgiy/expressionhandler/Handler.java
+ com.github.ddolgiy.expressionhandler.Handler
 com/github/ddolgiy/statemachine/state/State.java
  com.github.ddolgiy.statemachine.state.State
 com/github/ddolgiy/expressionhandler/storage/Operators.java
@@ -14,22 +14,22 @@ com/github/ddolgiy/exception/UnresolvedException.java
  com.github.ddolgiy.exception.UnresolvedException
 com/github/ddolgiy/exception/UnexpectedSymbolException.java
  com.github.ddolgiy.exception.UnexpectedSymbolException
-com/github/ddolgiy/expressionhandler/Handler.java
- com.github.ddolgiy.expressionhandler.Handler
-com/github/ddolgiy/statemachine/applier/StateApplier.java
- com.github.ddolgiy.statemachine.applier.StateApplier
-com/github/ddolgiy/statemachine/StateMachine.java
- com.github.ddolgiy.statemachine.StateMachine
-com/github/ddolgiy/statemachine/applier/CloseParenthesisStateApplier.java
- com.github.ddolgiy.statemachine.applier.CloseParenthesisStateApplier
 com/github/ddolgiy/statemachine/StateMachineSettings.java
  com.github.ddolgiy.statemachine.StateMachineSettings
-com/github/ddolgiy/statemachine/applier/FinishStateApplier.java
- com.github.ddolgiy.statemachine.applier.FinishStateApplier
-com/github/ddolgiy/statemachine/applier/OperandStateApplier.java
- com.github.ddolgiy.statemachine.applier.OperandStateApplier
+com/github/ddolgiy/statemachine/applier/StateApplier.java
+ com.github.ddolgiy.statemachine.applier.StateApplier
+com/github/ddolgiy/statemachine/applier/CloseParenthesisStateApplier.java
+ com.github.ddolgiy.statemachine.applier.CloseParenthesisStateApplier
 com/github/ddolgiy/statemachine/applier/OperatorStateApplier.java
  com.github.ddolgiy.statemachine.applier.OperatorStateApplier
+com/github/ddolgiy/expressionhandler/expression/Expression.java
+ com.github.ddolgiy.expressionhandler.expression.Expression
+com/github/ddolgiy/statemachine/applier/OperandStateApplier.java
+ com.github.ddolgiy.statemachine.applier.OperandStateApplier
+com/github/ddolgiy/statemachine/applier/FinishStateApplier.java
+ com.github.ddolgiy.statemachine.applier.FinishStateApplier
+com/github/ddolgiy/statemachine/StateMachine.java
+ com.github.ddolgiy.statemachine.StateMachine
 com/github/ddolgiy/ExpressionStateMachineExecutor.java
  com.github.ddolgiy.ExpressionStateMachineExecutor
 com/github/ddolgiy/statemachine/applier/OpenParenthesisStateApplier.java

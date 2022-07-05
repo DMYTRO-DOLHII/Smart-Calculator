@@ -30,7 +30,7 @@ public class OpenParenthesisStateApplier extends StateApplier {
 
             settings.stateSetUp(
                     State.INITIAL,
-                    Set.of(State.OPERAND),
+                    Set.of(State.OPERAND, State.OPEN_PARENTHESIS),
                     null
             );
 
@@ -48,7 +48,7 @@ public class OpenParenthesisStateApplier extends StateApplier {
 
             settings.stateSetUp(
                     State.OPEN_PARENTHESIS,
-                    Set.of(State.OPERATOR, State.CLOSE_PARENTHESIS),
+                    Set.of(State.OPERATOR, State.OPEN_PARENTHESIS, State.CLOSE_PARENTHESIS),
                     new OpenParenthesisStateApplier()
             );
 

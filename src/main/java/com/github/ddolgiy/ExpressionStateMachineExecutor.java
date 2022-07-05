@@ -17,7 +17,7 @@ public class ExpressionStateMachineExecutor {
 
     private final StateMachine globalStateMachine;
 
-    public ExpressionStateMachineExecutor(){
+    public ExpressionStateMachineExecutor() {
         StateMachineSettings settings = new StateMachineSettings();
 
         settings.stateSetUp(
@@ -43,7 +43,7 @@ public class ExpressionStateMachineExecutor {
 
         settings.stateSetUp(
                 State.OPEN_PARENTHESIS,
-                Set.of(State.OPERATOR, State.FINISH),
+                Set.of(State.OPERATOR, State.FINISH, State.OPEN_PARENTHESIS),
                 new OpenParenthesisStateApplier()
         );
 
@@ -56,15 +56,16 @@ public class ExpressionStateMachineExecutor {
         globalStateMachine = new StateMachine(settings);
     }
 
-    public void execute(Expression expression){
+    public double execute(Expression expression) {
         try {
             globalStateMachine.run(expression);
         } catch (UnexpectedSymbolException | UnresolvedException e) {
             e.printStackTrace();
         }
+        return globalStateMachine.getResult();
     }
 
-    public void printResult(){
+    public void printResult() {
         System.out.println(globalStateMachine.getResult());
     }
 }
