@@ -7,7 +7,6 @@ import com.github.ddolgiy.statemachine.state.State;
 
 public class OperandStateApplier extends StateApplier {
 
-    private boolean isDouble = false;
 
     public OperandStateApplier() {
         super(new String[]{"1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "."});
@@ -15,6 +14,7 @@ public class OperandStateApplier extends StateApplier {
 
     @Override
     public State apply(Expression expression, Handler handler) throws UnexpectedSymbolException {
+        boolean isDouble = false;
         StringBuilder operand = new StringBuilder();
 
         if (expression.get().equals("-")) {
@@ -37,7 +37,6 @@ public class OperandStateApplier extends StateApplier {
         if (!operand.isEmpty()) {
             Double res = Double.parseDouble(operand.toString());
             handler.add(res);
-
             System.out.println("Found in expression operand : " + operand);
             return State.OPERAND;
         }

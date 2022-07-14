@@ -1,133 +1,297 @@
 $Found in expression operand : 8173
 %State { OPERAND } have been applied
+Position : 4
 "Found in expression operator : -
 &State { OPERATOR } have been applied
+Position : 5
 %Found in expression operand : 17739
 %State { OPERAND } have been applied
+Position : 11
 "Found in expression operator : +
 &State { OPERATOR } have been applied
+Position : 12
 #Found in expression operand : 928
 %State { OPERAND } have been applied
+Position : 15
 "Found in expression operator : /
 &State { OPERATOR } have been applied
+Position : 16
 #Found in expression operand : 222
 %State { OPERAND } have been applied
+Position : 19
 "Found in expression operator : +
 &State { OPERATOR } have been applied
+Position : 20
 "Found in expression operand : 19
 %State { OPERAND } have been applied
+Position : 22
 "Found in expression operator : *
 &State { OPERATOR } have been applied
+Position : 23
 #Found in expression operand : 154
 %State { OPERAND } have been applied
+Position : 26
 /State { CLOSE_PARENTHESIS } have been applied
+Position : 27
  928.0/222.0 = 4.18018018018018
 .17739.0+4.18018018018018 = 17743.18018018018
 19.0*154.0 = 2926.0
 .17743.18018018018+2926.0 = 20669.18018018018
 .State { OPEN_PARENTHESIS } have been applied
+Position : 27
 "Found in expression operator : /
 &State { OPERATOR } have been applied
+Position : 28
 #Found in expression operand : 554
 %State { OPERAND } have been applied
+Position : 31
 "Found in expression operator : -
 &State { OPERATOR } have been applied
+Position : 32
 $Found in expression operand : 1000
 %State { OPERAND } have been applied
+Position : 36
 $State { FINISH } have been applied
+Position : 36
 -20669.18018018018/554.0 = 37.30898949491007
 -8173.0-37.30898949491007 = 8135.69101050509
 ,8135.69101050509-1000.0 = 7135.69101050509
 $Found in expression operand : 1414
 %State { OPERAND } have been applied
+Position : 4
 "Found in expression operator : +
 &State { OPERATOR } have been applied
+Position : 5
 $Found in expression operand : 3849
 %State { OPERAND } have been applied
+Position : 9
 "Found in expression operator : *
 &State { OPERATOR } have been applied
+Position : 10
 "Found in expression operand : 10
 %State { OPERAND } have been applied
+Position : 12
 "Found in expression operator : /
 &State { OPERATOR } have been applied
+Position : 13
 $Found in expression operand : 1111
 %State { OPERAND } have been applied
+Position : 17
 "Found in expression operator : -
 &State { OPERATOR } have been applied
+Position : 18
 "Found in expression operand : 14
 %State { OPERAND } have been applied
+Position : 20
 $State { FINISH } have been applied
+Position : 20
 3849.0*10.0 = 38490.0
 %38490.0/1111.0 = 34.644464446444644
 01414.0+34.644464446444644 = 1448.6444644464445
 .1448.6444644464445-14.0 = 1434.6444644464445
 !Found in expression operand : 2
 %State { OPERAND } have been applied
+Position : 1
 "Found in expression operator : +
 &State { OPERATOR } have been applied
+Position : 2
 !Found in expression operand : 2
 %State { OPERAND } have been applied
+Position : 3
 "Found in expression operator : *
 &State { OPERATOR } have been applied
+Position : 4
 !Found in expression operand : 2
 %State { OPERAND } have been applied
+Position : 5
 $State { FINISH } have been applied
+Position : 5
 2.0*2.0 = 4.0
 2.0+4.0 = 6.0
 "Found in expression operand : -4
 %State { OPERAND } have been applied
+Position : 2
 "Found in expression operator : +
 &State { OPERATOR } have been applied
+Position : 3
 !Found in expression operand : 4
 %State { OPERAND } have been applied
+Position : 4
 $State { FINISH } have been applied
+Position : 4
 -4.0+4.0 = 0.0
 !Found in expression operand : 2
 %State { OPERAND } have been applied
+Position : 1
 "Found in expression operator : +
 &State { OPERATOR } have been applied
+Position : 2
 "Found in expression operand : -2
 %State { OPERAND } have been applied
+Position : 5
 /State { CLOSE_PARENTHESIS } have been applied
+Position : 6
 .State { OPEN_PARENTHESIS } have been applied
+Position : 6
 $State { FINISH } have been applied
+Position : 6
 2.0+-2.0 = 0.0
 !Found in expression operand : 5
 %State { OPERAND } have been applied
+Position : 1
 "Found in expression operator : -
 &State { OPERATOR } have been applied
+Position : 2
 !Found in expression operand : 2
 %State { OPERAND } have been applied
+Position : 4
 "Found in expression operator : +
 &State { OPERATOR } have been applied
+Position : 5
 "Found in expression operand : -2
 %State { OPERAND } have been applied
+Position : 8
 /State { CLOSE_PARENTHESIS } have been applied
+Position : 9
 .State { OPEN_PARENTHESIS } have been applied
+Position : 9
 /State { CLOSE_PARENTHESIS } have been applied
+Position : 10
 2.0+-2.0 = 0.0
 .State { OPEN_PARENTHESIS } have been applied
+Position : 10
 "Found in expression operator : *
 &State { OPERATOR } have been applied
+Position : 11
 !Found in expression operand : 3
 %State { OPERAND } have been applied
+Position : 12
 $State { FINISH } have been applied
+Position : 12
 0.0*3.0 = 0.0
 5.0-0.0 = 5.0
-!Found in expression operand : 2
+$Found in expression operand : 7193
 %State { OPERAND } have been applied
+Position : 4
+"Found in expression operator : -
+&State { OPERATOR } have been applied
+Position : 5
+$Found in expression operand : -123
+%State { OPERAND } have been applied
+Position : 10
 "Found in expression operator : +
 &State { OPERATOR } have been applied
-!Found in expression operand : 2
+Position : 11
+$Found in expression operand : 6273
 %State { OPERAND } have been applied
-/State { CLOSE_PARENTHESIS } have been applied
-2.0+2.0 = 4.0
-.State { OPEN_PARENTHESIS } have been applied
+Position : 15
 "Found in expression operator : *
 &State { OPERATOR } have been applied
-!Found in expression operand : 2
+Position : 16
+"Found in expression operand : 77
 %State { OPERAND } have been applied
+Position : 18
+"Found in expression operator : /
+&State { OPERATOR } have been applied
+Position : 19
+"Found in expression operand : 35
+%State { OPERAND } have been applied
+Position : 22
+"Found in expression operator : /
+&State { OPERATOR } have been applied
+Position : 23
+!Found in expression operand : 5
+%State { OPERAND } have been applied
+Position : 24
+"Found in expression operator : +
+&State { OPERATOR } have been applied
+Position : 25
+"Found in expression operand : 17
+%State { OPERAND } have been applied
+Position : 27
 /State { CLOSE_PARENTHESIS } have been applied
-4.0*2.0 = 8.0
+Position : 28
+35.0/5.0 = 7.0
+7.0+17.0 = 24.0
 .State { OPEN_PARENTHESIS } have been applied
+Position : 28
+/State { CLOSE_PARENTHESIS } have been applied
+Position : 29
+6273.0*77.0 = 483021.0
+483021.0/24.0 = 20125.875
+-123.0+20125.875 = 20002.875
+.State { OPEN_PARENTHESIS } have been applied
+Position : 29
+"Found in expression operator : /
+&State { OPERATOR } have been applied
+Position : 30
+%Found in expression operand : 20000
+%State { OPERAND } have been applied
+Position : 35
 $State { FINISH } have been applied
+Position : 35
+ 20002.875/20000.0 = 1.00014375
+#7193.0-1.00014375 = 7191.99985625
+	!Found in expression operand : 2
+	%State { OPERAND } have been applied
+	Position : 2
+	/State { CLOSE_PARENTHESIS } have been applied
+	Position : 3
+	.State { OPEN_PARENTHESIS } have been applied
+	Position : 3
+	$State { FINISH } have been applied
+	Position : 3
+
+!Found in expression operand : 2
+
+%State { OPERAND } have been applied
+
+Position : 3
+
+"Found in expression operator : +
+
+&State { OPERATOR } have been applied
+
+Position : 4
+
+!Found in expression operand : 2
+
+%State { OPERAND } have been applied
+
+Position : 5
+
+/State { CLOSE_PARENTHESIS } have been applied
+
+Position : 6
+
+2.0+2.0 = 4.0
+
+.State { OPEN_PARENTHESIS } have been applied
+
+Position : 6
+
+"Found in expression operator : *
+
+&State { OPERATOR } have been applied
+
+Position : 7
+
+!Found in expression operand : 2
+
+%State { OPERAND } have been applied
+
+Position : 8
+
+/State { CLOSE_PARENTHESIS } have been applied
+
+Position : 9
+
+4.0*2.0 = 8.0
+
+.State { OPEN_PARENTHESIS } have been applied
+
+Position : 9
+
+$State { FINISH } have been applied
+
+Position : 9

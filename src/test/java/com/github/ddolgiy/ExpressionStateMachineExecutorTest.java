@@ -35,6 +35,8 @@ public class ExpressionStateMachineExecutorTest {
                 Arguments.of("-4+4", 0d),
                 Arguments.of("2+(-2)", 0d),
                 Arguments.of("5-(2+(-2))*3", 5d),
+                Arguments.of("7193-(-123+6273*77/(35/5+17))/20000", 7192d),
+                Arguments.of("(2)", 2d),
                 Arguments.of("((2+2)*2)", 8d)
         );
     }

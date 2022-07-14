@@ -21,14 +21,12 @@ public class Expression {
      *
      * @param expression input string of expression
      */
-    public Expression(String expression){
+    public Expression(String expression) {
         this.expression = expression;
         index = 0;
     }
 
-    public String get(){
-
-
+    public String get() {
         return String.valueOf(expression.charAt(index));
     }
 
@@ -38,7 +36,7 @@ public class Expression {
      * @param i index of character that will return
      * @return character as a string
      */
-    public String get(int i){
+    public String get(int i) {
 
         return String.valueOf(expression.charAt(i));
     }
@@ -48,9 +46,8 @@ public class Expression {
      *
      * @return character as a string onn current index
      */
-    public String cut(){
+    public String cut() {
         String res = String.valueOf(expression.charAt(index++));
-
 
 
         return res;
@@ -62,11 +59,8 @@ public class Expression {
      * @param n amount of characters, that will be cut from the expression, starting from index
      * @return string of character taken from expression
      */
-    public String cut(int n){
+    public String cut(int n) {
         String res = expression.substring(index++, n);
-
-
-
         return res;
     }
 
@@ -86,11 +80,11 @@ public class Expression {
      *
      * @return index of current processed character
      */
-    public int position(){
+    public int position() {
         return index;
     }
 
-    public boolean isNotEnd(){
+    public boolean isNotEnd() {
         return index != expression.length();
     }
 }

@@ -43,7 +43,7 @@ public class ExpressionStateMachineExecutor {
 
         settings.stateSetUp(
                 State.OPEN_PARENTHESIS,
-                Set.of(State.OPERATOR, State.FINISH, State.OPEN_PARENTHESIS),
+                Set.of(State.OPERATOR, State.FINISH),
                 new OpenParenthesisStateApplier()
         );
 

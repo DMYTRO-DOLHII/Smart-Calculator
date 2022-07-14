@@ -46,6 +46,7 @@ public class StateMachine {
         for (State possibleState : nextStates) {
             if (settings.getApplier(possibleState).apply(expression, handler) != null) {
                 System.out.println("State { " + possibleState + " } have been applied");
+                System.out.println("Position : " + expression.position());
                 return possibleState;
             }
         }
