@@ -47,10 +47,7 @@ public class Expression {
      * @return character as a string onn current index
      */
     public String cut() {
-        String res = String.valueOf(expression.charAt(index++));
-
-
-        return res;
+        return String.valueOf(expression.charAt(index++));
     }
 
     /**
@@ -60,8 +57,11 @@ public class Expression {
      * @return string of character taken from expression
      */
     public String cut(int n) {
-        String res = expression.substring(index++, n);
-        return res;
+        return expression.substring(index++, n);
+    }
+
+    public boolean startWith(String sub){
+        return expression.substring(index).startsWith(sub);
     }
 
     /**

@@ -8,7 +8,7 @@ public enum State {
     OPERATOR,
     OPEN_PARENTHESIS,
     CLOSE_PARENTHESIS,
-
+    SQRT,
 
     FINISH
 }
