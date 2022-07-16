@@ -57,7 +57,7 @@ public class Expression {
      * @return string of character taken from expression
      */
     public String cut(int n) {
-        return expression.substring(index++, n);
+        return expression.substring(index, n + index++);
     }
 
     public boolean startWith(String sub){

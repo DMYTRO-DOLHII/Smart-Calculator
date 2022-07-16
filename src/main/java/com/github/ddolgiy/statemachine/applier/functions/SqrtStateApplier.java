@@ -19,6 +19,8 @@ public class SqrtStateApplier extends StateApplier {
     @Override
     public State apply(Expression expression, Handler handler) throws UnexpectedSymbolException {
         if(expression.startWith(this.function)){
+            expression.cut(5);
+
             StateMachineSettings settings = new StateMachineSettings();
 
             settings.stateSetUp(
