@@ -9,6 +9,7 @@ import com.github.ddolgiy.statemachine.applier.FinishStateApplier;
 import com.github.ddolgiy.statemachine.applier.OpenParenthesisStateApplier;
 import com.github.ddolgiy.statemachine.applier.OperandStateApplier;
 import com.github.ddolgiy.statemachine.applier.OperatorStateApplier;
+import com.github.ddolgiy.statemachine.applier.functions.SqrtStateApplier;
 import com.github.ddolgiy.statemachine.state.State;
 
 import java.util.Set;
@@ -22,7 +23,7 @@ public class ExpressionStateMachineExecutor {
 
         settings.stateSetUp(
                 State.INITIAL,
-                Set.of(State.OPERAND, State.OPEN_PARENTHESIS),
+                Set.of(State.OPERAND, State.OPEN_PARENTHESIS, State.SQRT),
                 null);
 
         settings.stateSetUp(
@@ -37,7 +38,8 @@ public class ExpressionStateMachineExecutor {
                 State.OPERATOR,
                 Set.of(
                         State.OPERAND,
-                        State.OPEN_PARENTHESIS),
+                        State.OPEN_PARENTHESIS,
+                        State.SQRT),
                 new OperatorStateApplier()
         );
 
@@ -45,6 +47,14 @@ public class ExpressionStateMachineExecutor {
                 State.OPEN_PARENTHESIS,
                 Set.of(State.OPERATOR, State.FINISH),
                 new OpenParenthesisStateApplier()
+        );
+
+        settings.stateSetUp(
+                State.SQRT,
+                Set.of(
+                        State.OPERATOR, State.FINISH
+                ),
+                new SqrtStateApplier()
         );
 
         settings.stateSetUp(

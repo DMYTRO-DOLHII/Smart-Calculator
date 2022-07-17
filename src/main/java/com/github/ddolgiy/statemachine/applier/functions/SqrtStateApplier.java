@@ -12,14 +12,14 @@ import com.github.ddolgiy.statemachine.state.State;
 import java.util.Set;
 
 public class SqrtStateApplier extends StateApplier {
-    public SqrtStateApplier(String[] characters) {
+    public SqrtStateApplier() {
         super("sqrt(");
     }
 
     @Override
     public State apply(Expression expression, Handler handler) throws UnexpectedSymbolException {
         if(expression.startWith(this.function)){
-            expression.cut(5);
+            expression.cut(this.function.length());
 
             StateMachineSettings settings = new StateMachineSettings();
 
