@@ -295,3 +295,12 @@
 $State { FINISH } have been applied
 
 Position : 9
+#Found in expression operand : 144
+%State { OPERAND } have been applied
+Position : 8
+/State { CLOSE_PARENTHESIS } have been applied
+Position : 9
+"State { SQRT } have been applied
+Position : 9
+$State { FINISH } have been applied
+Position : 9

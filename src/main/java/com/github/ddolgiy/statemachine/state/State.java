@@ -9,6 +9,8 @@ public enum State {
     OPEN_PARENTHESIS,
     CLOSE_PARENTHESIS,
     SQRT,
+    MIN,
+    COMMA,
 
     FINISH
 }
